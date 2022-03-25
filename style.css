@@ -1,0 +1,11 @@
+#gridContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: inherit;
+}
+
+.pixelDiv {
+    height: 30px;
+    width: 30px;
+    background-color: lightpink;
+}
