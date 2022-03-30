@@ -58,3 +58,9 @@ main {
     height: 10px;
     width: 10px;
 }
+
+#clearButton {
+    padding: 10px 20px 10px 20px;
+    font-size: 1.15rem;
+    margin-top: 20px;
+}

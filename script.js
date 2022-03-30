@@ -25,6 +25,19 @@ function createGrid(dimension) {
             });
             break;
     }
+    /* !IMPORTANTE! Per poter rimuovere un event listener bisogna che, sia quando viene aggiunto che rimosso (add o remove)
+    la funzione non si anonima e in particolare che sia assegnata ad una VARIABILE. L'elemento e (o event) va passato alla
+    funzione direttamente quando viene dichiarata, con la sintassi 'nomeFunzione = function (e) { codice }' */
+    gridContainer.addEventListener('mousedown', () => {
+        allCells.forEach((cell) => {
+            cell.addEventListener('mouseover', color);
+        });
+    });
+    gridContainer.addEventListener('mouseup', () => {
+        allCells.forEach((cell) => {
+            cell.removeEventListener('mouseover', color);
+        });
+    });
 }
 
 function deleteGrid() {
@@ -53,7 +66,7 @@ function clear() {
     })
 }
 
-function color() {
+const color = function (e) {
     e.target.style.backgroundColor = "rgb(40, 40, 40)";
 }
 
