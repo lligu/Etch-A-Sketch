@@ -25,6 +25,18 @@ function createGrid(dimension) {
             });
             break;
     }
+    currentColor = '#000000';
+    colorPicker = document.querySelector('#chooseColor');
+    colorPicker.addEventListener('change', (e) => {
+        currentColor = e.target.value;
+        console.log(currentColor);
+    })
+    rainbowMode = document.querySelector('#rainbowMode');
+    rainbowMode.addEventListener('click', () => {
+        color = function (e) {
+            e.target.style.backgroundColor = `rgb(${randomGen()}, ${randomGen()}, ${randomGen()})`
+        }
+    })
     /* !IMPORTANTE! Per poter rimuovere un event listener bisogna che, sia quando viene aggiunto che rimosso (add o remove)
     la funzione non si anonima e in particolare che sia assegnata ad una VARIABILE. L'elemento e (o event) va passato alla
     funzione direttamente quando viene dichiarata, con la sintassi 'nomeFunzione = function (e) { codice }' */
@@ -66,8 +78,12 @@ function clear() {
     })
 }
 
+function randomGen() {
+    return Math.floor(Math.random() * 250);
+}
+
 const color = function (e) {
-    e.target.style.backgroundColor = "rgb(40, 40, 40)";
+    e.target.style.backgroundColor = currentColor
 }
 
 clear();

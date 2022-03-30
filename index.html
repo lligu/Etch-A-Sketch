@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <script src="script.js" defer></script>
     <title>E-A-S</title>
 </head>
+
 <body>
     <header>
         <h1>Etch-A-Sketch</h1>
@@ -22,10 +24,16 @@
         <div id="gridContainer">
         </div>
         <button id="clearButton">Clear</button>
-        <button id="colorMode">Color Mode</button>
+        <div id="colorModeDiv">
+            <button id="colorMode">Color Mode</button>
+            <label for="chooseColor">Choose a color:</label>
+            <input type="color" id="chooseColor" name="chooseColor" value="#000000">
+        </div>
         <button id="rainbowMode">Rainbow Mode</button>
         <button id="progressiveDarkMode">Progressive Dark mode</button>
         <button id="eraserMode">Eraser Mode</button>
+        <!-- aggiungere scelta dimensioni -->
     </main>
 </body>
+
 </html>
