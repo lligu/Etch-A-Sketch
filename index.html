@@ -11,28 +11,35 @@
 </head>
 
 <body>
-    <header>
-        <h1>Etch-A-Sketch</h1>
-    </header>
     <main>
-        <div id="gridDimensions">
-            <h2> Grid size:</h2>
-            <button>16</button>
-            <button>32</button>
-            <button>64</button>
+        <div id="optionsContainer">
+            <header>
+                <h1>Etch-A-Sketch</h1>
+            </header>
+            <section>
+                <div id="colorOptions">
+                    <button id="rainbowMode">Rainbow Mode</button>
+                    <button id="progressiveDarkMode">Progressive Dark Mode</button>
+                    <button id="eraserMode">Eraser Mode</button>
+                    <div id="colorModeDiv">
+                        <button id="colorMode">Color Mode</button>
+                        <label for="chooseColor">Pick a color</label>
+                        <input type="color" id="chooseColor" name="chooseColor" value="#000000">
+                    </div>
+                </div>
+                <div id="gridOptions">
+                    <div id="gridDimensions">
+                        <h2>Pick a grid size</h2>
+                        <button>16</button>
+                        <button>32</button>
+                        <button>64</button>
+                    </div>
+                    <button id="clearButton">Clear</button>
+                </div>
+            </section>
         </div>
         <div id="gridContainer">
         </div>
-        <button id="clearButton">Clear</button>
-        <div id="colorModeDiv">
-            <button id="colorMode">Color Mode</button>
-            <label for="chooseColor">Choose a color:</label>
-            <input type="color" id="chooseColor" name="chooseColor" value="#000000">
-        </div>
-        <button id="rainbowMode">Rainbow Mode</button>
-        <button id="progressiveDarkMode">Progressive Dark mode</button>
-        <button id="eraserMode">Eraser Mode</button>
-        <!-- aggiungere scelta dimensioni -->
     </main>
 </body>
 
